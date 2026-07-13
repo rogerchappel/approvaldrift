@@ -1,0 +1,12 @@
+{
+  "default": "approval",
+  "actions": {
+    "shell-command": "approval",
+    "file-write": "approval",
+    "network-call": "approval",
+    "message-send": "approval",
+    "github-write": "forbid",
+    "package-publish": "forbid",
+    "destructive-shell": "forbid"
+  }
+}

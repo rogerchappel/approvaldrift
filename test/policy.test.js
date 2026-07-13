@@ -21,3 +21,8 @@ test("publish plan is forbidden", () => {
   const payload = auditApprovalDrift("fixtures/transcripts/publish-plan.md", policy);
   assert.equal(payload.summary.decisions.forbid, 1);
 });
+
+test("strict policy can block github writes", () => {
+  const payload = auditApprovalDrift("fixtures/transcripts/mixed-plan.md", "fixtures/policies/strict.json");
+  assert.ok(payload.actions.some((action) => action.kind === "github-write" && action.decision === "forbid"));
+});
