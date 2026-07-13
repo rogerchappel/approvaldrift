@@ -7,6 +7,10 @@ export function auditApprovalDrift(transcriptPath, policyPath) {
   const policy = loadPolicy(policyPath);
   const actions = classifyActions(extractActions(transcriptPath), policy);
   return {
+    source: {
+      transcript: transcriptPath,
+      policy: policyPath
+    },
     summary: summarize(actions),
     actions
   };

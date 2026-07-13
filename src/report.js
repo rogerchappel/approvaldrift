@@ -6,6 +6,8 @@ export function renderMarkdown(payload) {
   const lines = [
     "# approvaldrift report",
     "",
+    `Transcript: \`${payload.source.transcript}\``,
+    `Policy: \`${payload.source.policy}\``,
     `Status: ${payload.summary.status}`,
     `Actions found: ${payload.summary.actions}`,
     `Decisions: ${payload.summary.decisions.allow} allow, ${payload.summary.decisions.approval} approval, ${payload.summary.decisions.forbid} forbid`,
