@@ -6,10 +6,10 @@ ship
 
 ## Verification
 
-- `npm test`
-- `npm run check`
-- `npm run smoke`
-- `npm pack --dry-run`
+- `npm test` - pass, 8 tests.
+- `npm run check` - pass; safe and mixed fixtures classify as expected.
+- `npm run smoke` - pass; safe fixture reports `Status: clear`.
+- `npm pack --dry-run` - pass; tarball includes CLI, source, docs, fixtures, README, and `SKILL.md`.
 
 ## Notes
 
