@@ -21,6 +21,10 @@ function usage() {
   return `approvaldrift <plan.md> <policy.json> [--format markdown|json] [--fail-on approval|forbid]
 
 Classify planned agent actions against an approval policy.
+
+Examples:
+  approvaldrift plan.md policy.json
+  approvaldrift plan.md policy.json --format json --fail-on approval
 `;
 }
 
