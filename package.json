@@ -32,5 +32,9 @@
     "fixtures",
     "SKILL.md",
     "README.md"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerchappel/approvaldrift.git"
+  }
 }
