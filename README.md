@@ -47,6 +47,15 @@ Levels are `allow`, `approval`, and `forbid`.
 
 The checker never runs commands, sends messages, publishes packages, or calls APIs. It only reads the transcript and policy file.
 
+## Limitations
+
+- Detection is pattern-based and depends on the action names and transcript text
+  being explicit.
+- Policies are local JSON files; this tool does not fetch organization approval
+  rules or connector permissions.
+- A clean report means no configured drift was found, not that an action is safe
+  to execute without human review.
+
 ## Verification
 
 ```bash
