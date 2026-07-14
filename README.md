@@ -53,4 +53,8 @@ The checker never runs commands, sends messages, publishes packages, or calls AP
 npm test
 npm run check
 npm run smoke
+npm run package:smoke
+npm run release:check
 ```
+
+`npm run release:check` is the CI and release-candidate gate. It runs the fixture classifier check, Node test suite, CLI smoke, and a package dry-run that verifies the npm tarball contains the CLI, library, docs, fixtures, license, and support files without bundling tests.
